@@ -11,3 +11,6 @@ RUN mvn package
 RUN cp /target/hello-1.0.war var/lib/tomcat/webapps/
 EXPOSE 8080
 
+
+123
+
