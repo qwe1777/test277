@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 RUN apt update
-RUN apt install tomcat -y
+RUN apt install tomcat9 -y
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
 RUN mkdir -p "$CATALINA_HOME"
