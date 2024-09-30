@@ -1,5 +1,11 @@
-FROM tomcat
+FROM ubuntu:20.04
 RUN apt update
+RUN apt install tomcat -y
+ENV CATALINA_HOME /usr/local/tomcat
+ENV PATH $CATALINA_HOME/bin:$PATH
+RUN mkdir -p "$CATALINA_HOME"
+WORKDIR $CATALINA_HOME
+CMD ["catalina.sh", "run"]
 RUN apt install default-jdk -y
 RUN apt install maven -y
 RUN apt install git -y
