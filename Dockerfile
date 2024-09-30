@@ -8,5 +8,6 @@ WORKDIR /home
 RUN git clone "https://github.com/boxfuse/boxfuse-sample-java-war-hello.git"
 WORKDIR /home/boxfuse-sample-java-war-hello
 RUN mvn package
-RUN /bin/sh -c cp /target/hello-1.0.war /var/lib/tomcat9/webapps/
+WORKDIR /home/boxfuse-sample-java-war-hello/target/
+RUN /bin/sh -c cp hello-1.0.war /var/lib/tomcat9/webapps/
 EXPOSE 8080
