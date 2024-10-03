@@ -14,8 +14,8 @@ services:
               - 'volume1:/usr/local/tomcat/webapps'
         depends_on:
               - maven
-    volumes:
-         volume1: /home/java
+volumes:
+    volume1: /home/java
 ...
 
 
