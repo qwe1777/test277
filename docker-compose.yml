@@ -1,12 +1,12 @@
 ---
 services:
-    Maven:
+    maven:
           build:
               context: ./home
               dockerfile: dockerfile2.Dockerfile
           volumes:
               - './home:/home'
-    Tomcat:
+    tomcat:
         image: lciclcazz/lca-tomcat:latest
         ports:
               - '8080:8080'
