@@ -2,7 +2,7 @@
 services:
     maven:
           build:
-              context: ./home
+              context: ./
               dockerfile: dockerfile2.Dockerfile
           volumes:
               - './home:/home'
