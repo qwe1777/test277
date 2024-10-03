@@ -17,7 +17,7 @@ services:
           depends_on:
               - maven
 volumes:
-    volume1: './home:/home'
+    volume1: ./home:/home
 ...
 
 
