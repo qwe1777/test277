@@ -1,4 +1,7 @@
 ---
+    maven:
+      build:
+        context: ./
 
 
 ...
