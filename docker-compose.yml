@@ -7,7 +7,7 @@ containers:
               dockerfile: Dockerfile2.Dockerfile
           volumes:
               -'./home:/home'
-    Tomcat
+    Tomcat:
           image:lciclcazz/lca-tomcat:latest
           ports:
               - '8080:8080'
