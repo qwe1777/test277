@@ -1,7 +1,18 @@
 ---
-    maven:
-      build:
-        context: ./
-
-
+version: '3'
+containers:
+    Maven:
+          build:
+              context: ./home
+              dockerfile: Dockerfile2.Dockerfile
+          volumes:
+              -'./home:/home'
+    Tomcat
+          image:lciclcazz/lca-tomcat:latest
+          ports:
+              - '8080:8080'
+          volumes:
+              -',/home/boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps
+          depends_on:
+              - Maven
 ...
