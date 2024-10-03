@@ -11,7 +11,7 @@ services:
         ports:
               - '8080:8080'
         volumes:
-              - './home/boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps'
+              - './boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps'
         depends_on:
               - maven
 ...
