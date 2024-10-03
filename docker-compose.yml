@@ -5,13 +5,21 @@ services:
               context: ./
               dockerfile: Dockerfile2
           volumes:
-              - './home:/home'
+              - volume1
     tomcat:
-        image: dockertn3/tomcat-alpine-msfonts:latest
-        ports:
+          build:
+              context: ./
+              dockerfile: Dockerfile3
+          ports:
               - '8080:8080'
-        volumes:
-              - './boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps'
-        depends_on:
+          volumes:
+              - volume1
+          depends_on:
               - maven
+volumes:
+    volume1: './home:/home'
 ...
+
+
+
+
