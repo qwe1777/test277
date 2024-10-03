@@ -1,0 +1,2 @@
+FROM dockertn3/tomcat-alpine-msfonts:latest
+RUN cp /home/boxfuse-sample-java-war-hello/target /usr/local/tomcat/webapps
