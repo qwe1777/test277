@@ -5,17 +5,17 @@ services:
               context: ./
               dockerfile: Dockerfile2
           volumes:
-              - 'volume1:/home/java'
+              - volume1:/home/java
     tomcat:
         image: dockertn3/tomcat-alpine-msfonts:latest
         ports:
               - '8080:8080'
         volumes:
-              - 'volume1:/usr/local/tomcat/webapps'
+              - volume1:/usr/local/tomcat/webapps
         depends_on:
               - maven
 volumes:
-    volume1: './home/java'
+    volume1: ./home/java
 ...
 
 
