@@ -5,7 +5,7 @@ services:
               context: ./
               dockerfile: Dockerfile2
           volumes:
-              - volume1
+              - 'volume1'
     tomcat:
           build:
               context: ./
@@ -13,11 +13,11 @@ services:
           ports:
               - '8080:8080'
           volumes:
-              - volume1
+              - 'volume1'
           depends_on:
               - maven
 volumes:
-    volume1: ./home:/home
+    volume1: './home:/home'
 ...
 
 
