@@ -8,11 +8,11 @@ services:
           volumes:
               -'./home:/home'
     Tomcat:
-          image:lciclcazz/lca-tomcat:latest
-    ports:
+        image:lciclcazz/lca-tomcat:latest
+        ports:
               - '8080:8080'
-    volumes:
+        volumes:
               -',/home/boxfuse-sample-java-war-hello/target:/usr/local/tomcat/webapps
-    depends_on:
+        depends_on:
               - Maven
 ...
