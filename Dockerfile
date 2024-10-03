@@ -1,5 +1,6 @@
 FROM thonatos/openjdk-tomcat-maven:jdk8-maven3
-RUN echo y | apk add git
+RUN apk update
+RUN apk add git
 WORKDIR /home
 RUN git clone "https://github.com/boxfuse/boxfuse-sample-java-war-hello.git"
 WORKDIR /home/boxfuse-sample-java-war-hello
