@@ -8,7 +8,7 @@ services:
           volumes:
               -'./home:/home'
     Tomcat:
-        image:lciclcazz/lca-tomcat:latest
+        image: lciclcazz/lca-tomcat:latest
         ports:
               - '8080:8080'
         volumes:
