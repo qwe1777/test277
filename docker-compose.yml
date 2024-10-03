@@ -3,7 +3,7 @@ services:
     Maven:
           build:
               context: ./home
-              dockerfile: Dockerfile2.Dockerfile
+              dockerfile: dockerfile2.Dockerfile
           volumes:
               - './home:/home'
     Tomcat:
