@@ -51,6 +51,6 @@
      state: present  
   - name: Copy .war files into Tomcat directory
     copy:
-    src: /home/hello-1.0.war
+    src: /home/hello-1.0.war/84.201.139.70/home/boxfuse-sample-java-war-hello/target/hello-1.0.war
     dest: /var/lib/tomcat9/webapps/hello-1.0.war
 ...
