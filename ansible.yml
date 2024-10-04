@@ -28,12 +28,12 @@
       chdir: home/
        
   - name: Run mvn package
-    ansible.builtin.shell: mvn package
+    shell: mvn package
     args:
        chdir: home/boxfuse/boxfuse-sample-java-war-hello/
        
   - name: Fetch .war file's
-    ansible.builtin.fetch:
+    fetch:
      src: /home/boxfuse/boxfuse-sample-java-war-hello/target/hello-1.0.war
      dest: /home/hello-1.0.war
      
@@ -43,7 +43,7 @@
 
   tasks:
   - name: Execute apt update in shell
-    ansible.builtin.shell: apt update
+    shell: apt update
   
   - name: Ensure Tomcat package is present 
     apt: 
