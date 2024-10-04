@@ -25,7 +25,7 @@
   - name: Git clone boxfuse
     shell: git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
     args:
-      chdir: home/
+      chdir: /home
        
   - name: Run mvn package
     shell: mvn package
@@ -39,6 +39,7 @@
      
 - name: Running .war on Tomcat
   hosts: web
+  become: yes
 
   tasks:
   - name: Execute apt update in shell
