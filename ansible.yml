@@ -30,7 +30,7 @@
   - name: Run mvn package
     shell: mvn package
     args:
-       chdir: /home/boxfuse/boxfuse-sample-java-war-hello/
+       chdir: /home/boxfuse/boxfuse-sample-java-war-hello
        
   - name: Fetch .war file's
     fetch:
