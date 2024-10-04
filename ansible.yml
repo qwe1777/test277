@@ -6,6 +6,7 @@
   tasks:
   - name: Execute apt update in shell
     ansible.builtin.shell: apt update
+
   - name: Ensure maven package is present 
     apt: 
      name: maven
@@ -52,3 +53,4 @@
     copy:
     src: /home/hello-1.0.war
     dest: /var/lib/tomcat9/webapps/hello-1.0.war
+...
