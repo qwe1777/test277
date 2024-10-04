@@ -48,7 +48,8 @@
   - name: Ensure Tomcat package is present 
     apt: 
      name: tomcat9
-     state: present  
+     state: present
+
   - name: Copy .war files into Tomcat directory
     copy:
     src: /home/hello-1.0.war/84.201.139.70/home/boxfuse-sample-java-war-hello/target/hello-1.0.war
