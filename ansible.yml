@@ -39,7 +39,6 @@
      
 - name: Running .war on Tomcat
   hosts: web
-  become: yes
 
   tasks:
   - name: Execute apt update in shell
