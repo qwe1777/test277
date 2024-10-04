@@ -2,7 +2,6 @@
 - name: build 1.0
   hosts: db
   become: yes
-
   tasks:
   - name: Execute apt update in shell
     ansible.builtin.shell: apt update
@@ -40,7 +39,6 @@
 - name: Running .war on Tomcat
   hosts: web
   become: yes
-
   tasks:
   - name: Execute apt update in shell
     ansible.builtin.shell: apt update
